@@ -15,7 +15,7 @@ def ensure_api_key():
     if api_key:
         return api_key
 
-    # .env'de anahtar yoksa veya dosya mevcut değilse, Streamlit'in secret'larını deneriz.
+    # .env'de anahtar yoksa veya dosya mevcut değilse, Streamlit'in secret'larını dener.
     # Bu, Streamlit Cloud'da çalışmasını sağlar.
     try:
         if hasattr(st, 'secrets') and "GEMINI_API_KEY" in st.secrets:
@@ -32,7 +32,7 @@ def ensure_api_key():
         "veya Streamlit Cloud Secrets ayarlarınızı kontrol edin."
     )
 
-# --- SINIFINIZIN GERİ KALANI AYNI KALACAK ---
+
 
 class GeminiClient:
     def __init__(self):
@@ -48,9 +48,9 @@ class GeminiClient:
             # ensure_api_key'den veya genai.configure'dan gelen hatayı yakalar.
             raise RuntimeError(f"API yapılandırması sırasında bir hata oluştu: {e}")
 
-    # --- generate_text fonksiyonu ve diğer kodlar aynı kalacak ---
+   
     def generate_text(self, prompt: str, model: str = "gemini-2.0-flash", max_output_tokens: int = 512) -> str:
-        # ... (Bu fonksiyonun içeriği değişmeyecek)
+      
         try:
             model_instance = genai.GenerativeModel(model)
             generation_config = genai.types.GenerationConfig(
@@ -64,7 +64,7 @@ class GeminiClient:
         except Exception as e:
             raise RuntimeError(f"Gemini API çağrısında hata oluştu: {e}")
 
-# ... (if __name__ == "__main__" bloğu aynı kalacak)
+
 # alttaki kodlar kodunuzu test etmek veya doğrudan çalıştırmak için bir giriş noktası görevi görür.
 # yani dosyayı import etmeden direkt tek başına çalıştırdığınızda terminale yazı yazıp kontrol sağlamak içindir olmasada kod çalışır.
 if __name__ == "__main__":
