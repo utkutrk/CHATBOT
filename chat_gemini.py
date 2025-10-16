@@ -1,70 +1,70 @@
-# chat_gemini.py
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-import streamlit as st # Streamlit'i import edin
+import streamlit as st
 
 def ensure_api_key():
     """
-    Önce Streamlit'in secret yönetimini, sonra .env dosyasını kontrol eder.
+    Streamlit Cloud'un secret'larını veya yerel .env dosyasını kullanarak
+    API anahtarını güvenli bir şekilde yükler. Hata vermeden kontrol eder.
     """
-    # Streamlit Cloud'da çalışırken
-    if hasattr(st, 'secrets') and "GEMINI_API_KEY" in st.secrets:
-        return st.secrets["GEMINI_API_KEY"]
-    
-    # Yerelde .env dosyasından çalışırken
+    # Önce yereldeki .env dosyasını kontrol etmeye çalışırız.
+    # Bu, yerel geliştirmeyi önceliklendirir.
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        raise EnvironmentError(
-            "GEMINI_API_KEY bulunamadı. Lütfen Streamlit ayarlarından "
-            "veya yerel .env dosyanızdan API anahtarını ayarlayın."
-        )
-    return api_key
+    if api_key:
+        return api_key
 
-class GeminiClient:  #API ile etkileşime giren tüm mantığı bir araya toplayan ana yapıdır.
+    # .env'de anahtar yoksa veya dosya mevcut değilse, Streamlit'in secret'larını deneriz.
+    # Bu, Streamlit Cloud'da çalışmasını sağlar.
+    try:
+        if hasattr(st, 'secrets') and "GEMINI_API_KEY" in st.secrets:
+            api_key = st.secrets["GEMINI_API_KEY"]
+            if api_key:
+                return api_key
+    except Exception:
+        # st.secrets erişimi yerelde bazen hata verebilir, bu yüzden es geçiyoruz.
+        pass
+
+    # Hiçbir yerde anahtar bulunamazsa hata veririz.
+    raise EnvironmentError(
+        "GEMINI_API_KEY bulunamadı. Lütfen projenizdeki .env dosyasını "
+        "veya Streamlit Cloud Secrets ayarlarınızı kontrol edin."
+    )
+
+# --- SINIFINIZIN GERİ KALANI AYNI KALACAK ---
+
+class GeminiClient:
     def __init__(self):
         """
         API anahtarını yükler ve Google Generative AI'ı yapılandırır.
         """
         try:
             self.api_key = ensure_api_key()
-            genai.configure(api_key=self.api_key) #Google AI kütüphanesini yapılandırır. Bu adımdan sonra kütüphane yapacağı tüm API çağrılarında bu anahtarı kullanır
-        # kodlar çalışırken bir hata oluşursa program çökmek yerine okunaklı sonuçlar üretir.
+            genai.configure(api_key=self.api_key)
         except ImportError:
             raise ImportError("google-generativeai kütüphanesini yükleyin: pip install google-generative-ai")
         except Exception as e:
+            # ensure_api_key'den veya genai.configure'dan gelen hatayı yakalar.
             raise RuntimeError(f"API yapılandırması sırasında bir hata oluştu: {e}")
-       
-       # metin üretme işini yapan fonksiyondur.
-    def generate_text(self, prompt: str, model: str = "gemini-2.0-flash", max_output_tokens: int = 512) -> str: #sirayla girdi metni,gemini modeli ve üretilen yanıtın maks uzunluğunu belirtir
-        """
-        Verilen prompt'u kullanarak Gemini modelinden metin üretir.
-        
-        Not: Güncel API'de max_output_tokens doğrudan generate_content içinde 
-        bir parametre değildir. Bu, 'generation_config' içinde ayarlanır.
-        """
+
+    # --- generate_text fonksiyonu ve diğer kodlar aynı kalacak ---
+    def generate_text(self, prompt: str, model: str = "gemini-2.0-flash", max_output_tokens: int = 512) -> str:
+        # ... (Bu fonksiyonun içeriği değişmeyecek)
         try:
-            # Model adıyla bir model nesnesi oluşturulur
             model_instance = genai.GenerativeModel(model)
-            
-            # Üretim ayarları (generation config) oluşturulur
             generation_config = genai.types.GenerationConfig(
                 max_output_tokens=max_output_tokens
             )
-
-            # Asıl API çağrısının yapıldığı yerdir.girdileri sunucuya gönderir
             response = model_instance.generate_content(
                 prompt,
                 generation_config=generation_config
             )
-
-            
             return response.text
-            
         except Exception as e:
-            # API'den gelebilecek hataları yakalamak için kullanılır
             raise RuntimeError(f"Gemini API çağrısında hata oluştu: {e}")
+
+# ... (if __name__ == "__main__" bloğu aynı kalacak)
 # alttaki kodlar kodunuzu test etmek veya doğrudan çalıştırmak için bir giriş noktası görevi görür.
 # yani dosyayı import etmeden direkt tek başına çalıştırdığınızda terminale yazı yazıp kontrol sağlamak içindir olmasada kod çalışır.
 if __name__ == "__main__":
