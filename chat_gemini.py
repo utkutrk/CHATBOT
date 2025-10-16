@@ -1,16 +1,25 @@
 # chat_gemini.py
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai  #APİ ile etkileşim kurmak için gerekli kütüphanedir.
+import google.generativeai as genai
+import streamlit as st # Streamlit'i import edin
 
-def ensure_api_key():  #api anahtarını kontrol eden bölüm
+def ensure_api_key():
     """
-    .env dosyasından API anahtarını yükler ve kontrol eder.
+    Önce Streamlit'in secret yönetimini, sonra .env dosyasını kontrol eder.
     """
+    # Streamlit Cloud'da çalışırken
+    if hasattr(st, 'secrets') and "GEMINI_API_KEY" in st.secrets:
+        return st.secrets["GEMINI_API_KEY"]
+    
+    # Yerelde .env dosyasından çalışırken
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        raise EnvironmentError("GEMINI_API_KEY ortam değişkeni bulunamadı. Lütfen .env dosyasını kontrol edin.")
+        raise EnvironmentError(
+            "GEMINI_API_KEY bulunamadı. Lütfen Streamlit ayarlarından "
+            "veya yerel .env dosyanızdan API anahtarını ayarlayın."
+        )
     return api_key
 
 class GeminiClient:  #API ile etkileşime giren tüm mantığı bir araya toplayan ana yapıdır.
