@@ -39,7 +39,7 @@ def retrieve(idx, encoder, texts_meta, query: str, top_k: int = 5):
     return results
 
 #Bu bölüm, kullanıcının gördüğü web sayfasını oluşturur.
-st.set_page_config(page_title="Finansal Chatbot U♥️Ö", layout="wide") #tarayıcı başlığı ve sayfa düzeni
+st.set_page_config(page_title="Finansal Chatbot", layout="wide") #tarayıcı başlığı ve sayfa düzeni
 
 #sayfanın sol tarafındaki menü ayarları burda yapılır.
 with st.sidebar:
@@ -79,7 +79,7 @@ with st.sidebar:
 
 
 
-st.title("📉FİNANSAL CHATBOT (Türkçe)")  #Sayfanın ana başlığını yazar
+st.title("📉FİNANSAL CHATBOT (Türkçe)U♥️Ö")  #Sayfanın ana başlığını yazar
 
 st.markdown("Bu chatbot finans ile ilgili sorularınızı yanıtlamak üzerine tasarlanmıştır.") #sayfanın açıklaması
 
