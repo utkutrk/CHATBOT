@@ -79,7 +79,7 @@ with st.sidebar:
 
 
 
-st.title("📉FİNANSAL CHATBOT (Türkçe)U♥️Ö")  #Sayfanın ana başlığını yazar
+st.title("📉FİNANSAL CHATBOT (Türkçe)")  #Sayfanın ana başlığını yazar
 
 st.markdown("Bu chatbot finans ile ilgili sorularınızı yanıtlamak üzerine tasarlanmıştır.") #sayfanın açıklaması
 
