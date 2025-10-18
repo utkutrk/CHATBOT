@@ -31,9 +31,9 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
 
 ## Kurulum (Installation) Özellikler ve Kullanım Alanları
 
--Projeyi 2 farklı şekilde çalıştırabilirsiniz:
--1) Deploy linki başlığı altındaki linkten kurulumsuz çalıştırabilirsiniz.
--2) Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
+- Projeyi 2 farklı şekilde çalıştırabilirsiniz:
+- 1) Deploy linki başlığı altındaki linkten kurulumsuz çalıştırabilirsiniz.
+- 2) Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 1.  Repoyu klonlayın:
     ```bash
@@ -52,11 +52,12 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
     ```
 4.  Bir .env dosyası oluşturun ve Google API anahtarınızı ekleyin:
     ```bash
-    GOOGLE_API_KEY=your_api_key
+    GEMINI_API_KEY=your_api_key
     ```
 4.  Programı çalıştırın:
     ```bash
-    python main.py
+    python data_loader.py 
+    streamlit run app.py
     ```
 ## İletişim bilgileri
 
