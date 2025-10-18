@@ -26,7 +26,8 @@ Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabil
 finans ile ilgili terimler hakkında bilgi alabilir.Yatırım tercihleriniz hakkında yorum soruları sorabilirsiniz.
 Örnek sorular ve daha fazla bilgi websitesin sol üst köşesinde mevcuttur.
 
-<img width="921" height="905" alt="Ekran görüntüsü 2025-10-18 151002" src="https://github.com/user-attachments/assets/d4321de7-d62b-4c70-8ff0-44f9aa6a22f0" />![Uploading Ekran görüntüsü 2025-10-18 151002.png…]()
+<img width="300" height="284" alt="Ekran görüntüsü 2025-10-18 15095" src="https://github.com/user-attachments/assets/35b99748-d826-4606-baaf-6d7d44ecf817" />
+
 
 
 
