@@ -25,13 +25,15 @@ Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve 
 - Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabilir ama çoğu finansal terim mevcuttur.
 - Finans ile ilgili terimler hakkında bilgi alabilir.Yatırım tercihleriniz hakkında yorum soruları sorabilirsiniz.
 - Örnek sorular ve daha fazla bilgi websitesin sol üst köşesinde mevcuttur.
-- Sorulan soruların, veri setinin hangi kısmından alındığı bilgisi chatbotun yanıtının altında bulunmaktadır.
+- Sorulan soruların, veri setinin hangi kısmından alındığı bilgisi chatbotun yanıtının altında bulunmaktadır.(sayfanın en altında)
 
 https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
 
 ## Kurulum (Installation) Özellikler ve Kullanım Alanları
 
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
+-Projeyi 2 farklı şekilde çalıştırabilirsiniz:
+-1) Deploy linki başlığı altındaki linkten kurulumsuz çalıştırabilirsiniz.
+-2) Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 1.  Repoyu klonlayın:
     ```bash
@@ -56,9 +58,21 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
     ```bash
     python main.py
     ```
+## İletişim bilgileri
 
-## Kullanım
+-E-mail: utku.trkk@gmail.com
+-GitHub: github.com/utkutrk
+-LinkedIn: linkedin.com/in/utkutrk
 
-Projeyi çalıştırdıktan sonra, konsol üzerinden chatbot ile sohbet etmeye başlayabilirsiniz.
+## Proje yapısı
 
-[Buraya chatbot ile nasıl etkileşime geçileceğine dair kısa bir örnek ekleyin.]
+CHATBOT/                
+├── index/                 
+│   ├── faiss_index.bin           
+│   └── metadata.json  
+├── app.py
+├── chat_gemini.py                
+├── data_loader.py             
+├── requirements.txt       
+└── README.md              
+
