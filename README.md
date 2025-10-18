@@ -60,19 +60,19 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
     ```
 ## İletişim bilgileri
 
--E-mail: utku.trkk@gmail.com
--GitHub: github.com/utkutrk
--LinkedIn: linkedin.com/in/utkutrk
+- E-mail: utku.trkk@gmail.com
+- GitHub: github.com/utkutrk
+- LinkedIn: linkedin.com/in/utkutrk
 
 ## Proje yapısı
 
-CHATBOT/                
-├── index/                 
-│   ├── faiss_index.bin           
-│   └── metadata.json  
-├── app.py
-├── chat_gemini.py                
-├── data_loader.py             
-├── requirements.txt       
-└── README.md              
+    CHATBOT/                
+    ├── index/                 
+    │   ├── faiss_index.bin           
+    │   └── metadata.json  
+    ├── app.py
+    ├── chat_gemini.py                
+    ├── data_loader.py             
+    ├── requirements.txt       
+    └── README.md              
 
