@@ -29,7 +29,7 @@ Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve 
 
 https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
 
-## Kurulum (Installation) Özellikler ve Kullanım Alanları
+## Kurulum
 
 - Projeyi 2 farklı şekilde çalıştırabilirsiniz:
 - 1️⃣Deploy linki başlığı altındaki linkten kurulumsuz çalıştırabilirsiniz.
