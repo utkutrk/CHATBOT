@@ -4,15 +4,15 @@ Bu proje,finansal anlamda aklınıza takılan soruları cevaplayan merak ettiği
 
 ## Proje Hakkında
 
-Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve finansal sorularınızı yanıtlar. Kullanıcının sorusuna en uygun bilgi parçacıkları veri tabanından bulunur ve bu bilgiler Gemini modeliyle sentezlenerek tutarlı ve doğru bir cevap üretilir..
+Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve finansal sorularınızı yanıtlar. Kullanıcının sorusuna en uygun bilgi parçacıkları veri tabanından bulunur ve bu bilgiler Gemini modeliyle sentezlenerek tutarlı ve doğru bir cevap üretilir.
 
 ## Bu projede kullanılan teknolojiler:
 
 - Streamlit: Arayüz tasarımı için
-- Huggingface: Veri setini çekmek için
+- Huggingface: Veri setini çekmek için 
 - SentenceTransformers: Metinleri vektöre çevirmek için
 - FAISS: Vektör benzerlik araması için
-- Gemini API: En uygun cevabı üretmek için
+- Gemini API: En uygun cevabı üretmek için (gemini-2.0-flash)
 
 ## Deploy linki
 
@@ -24,7 +24,7 @@ Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve 
 
 - Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabilir ama çoğu finansal terim mevcuttur.
 - Finans ile ilgili terimler hakkında bilgi alabilir.Yatırım tercihleriniz hakkında yorum soruları sorabilirsiniz.
-- Örnek sorular ve daha fazla bilgi websitesin sol üst köşesinde mevcuttur.
+- Örnek sorular ve daha fazla bilgi websitenin sol üst köşesinde mevcuttur.
 - Sorulan soruların, veri setinin hangi kısmından alındığı bilgisi chatbotun yanıtının altında bulunmaktadır.(sayfanın en altında)
 
 https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
@@ -32,8 +32,8 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
 ## Kurulum (Installation) Özellikler ve Kullanım Alanları
 
 - Projeyi 2 farklı şekilde çalıştırabilirsiniz:
-- 1) Deploy linki başlığı altındaki linkten kurulumsuz çalıştırabilirsiniz.
-- 2) Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
+- 1️⃣Deploy linki başlığı altındaki linkten kurulumsuz çalıştırabilirsiniz.
+- 2️⃣Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 1.  Repoyu klonlayın:
     ```bash
@@ -59,7 +59,7 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
     python data_loader.py 
     streamlit run app.py
     ```
-## İletişim bilgileri
+## İletişim
 
 - E-mail: utku.trkk@gmail.com
 - GitHub: https://github.com/utkutrk
