@@ -62,8 +62,8 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
 ## İletişim bilgileri
 
 - E-mail: utku.trkk@gmail.com
-- GitHub: github.com/utkutrk
-- LinkedIn: linkedin.com/in/utkutrk
+- GitHub: https://github.com/utkutrk
+- LinkedIn: https://linkedin.com/in/utkutrk
 
 ## Proje yapısı
 
