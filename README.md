@@ -19,7 +19,8 @@ Gemini API: En uygun cevabı üretmek için
 ## Deploy linki
 
 ⬇️Aşağıdaki linkten chatbotu bilgisayarınıza kurmadan direkt tarayıcıdan ulaşabilirsiniz.⬇️
-https://chatbot-ho54eaxtqycwqz4gt3c8k7.streamlit.app/
+
+- https://chatbot-ho54eaxtqycwqz4gt3c8k7.streamlit.app/
 
 ## Özellikler ve Kullanım Alanları
 Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabilir ama çoğu finansal terim mevcuttur.
