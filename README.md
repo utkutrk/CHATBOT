@@ -2,19 +2,17 @@
 
 Bu proje,finansal anlamda aklınıza takılan soruları cevaplayan merak ettiğiniz terimlerin anlamlarını ve kullanım alanlarını söyleyen bir chatbottur.
 
-![Proje Ekran Görüntüsü](BURAYA_RESİM_URLSİ_GELECEK.png)
-
 ## Proje Hakkında
 
 Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve finansal sorularınızı yanıtlar. Kullanıcının sorusuna en uygun bilgi parçacıkları veri tabanından bulunur ve bu bilgiler Gemini modeliyle sentezlenerek tutarlı ve doğru bir cevap üretilir..
 
 ## Bu projede kullanılan teknolojiler:
 
-Streamlit: Arayüz tasarımı için
-Huggingface: Veri setini çekmek için
-SentenceTransformers: Metinleri vektöre çevirmek için
-FAISS: Vektör benzerlik araması için
-Gemini API: En uygun cevabı üretmek için
+- Streamlit: Arayüz tasarımı için
+- Huggingface: Veri setini çekmek için
+- SentenceTransformers: Metinleri vektöre çevirmek için
+- FAISS: Vektör benzerlik araması için
+- Gemini API: En uygun cevabı üretmek için
 
 ## Deploy linki
 
@@ -23,14 +21,13 @@ Gemini API: En uygun cevabı üretmek için
 - https://chatbot-ho54eaxtqycwqz4gt3c8k7.streamlit.app/
 
 ## Özellikler ve Kullanım Alanları
-Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabilir ama çoğu finansal terim mevcuttur.
-finans ile ilgili terimler hakkında bilgi alabilir.Yatırım tercihleriniz hakkında yorum soruları sorabilirsiniz.
-Örnek sorular ve daha fazla bilgi websitesin sol üst köşesinde mevcuttur.
 
-<img width="300" height="284" alt="Ekran görüntüsü 2025-10-18 15095" src="https://github.com/user-attachments/assets/35b99748-d826-4606-baaf-6d7d44ecf817" />
+- Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabilir ama çoğu finansal terim mevcuttur.
+- Finans ile ilgili terimler hakkında bilgi alabilir.Yatırım tercihleriniz hakkında yorum soruları sorabilirsiniz.
+- Örnek sorular ve daha fazla bilgi websitesin sol üst köşesinde mevcuttur.
+- Sorulan soruların, veri setinin hangi kısmından alındığı bilgisi chatbotun yanıtının altında bulunmaktadır.
 
-
-
+https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
 
 ## Kurulum (Installation) Özellikler ve Kullanım Alanları
 
