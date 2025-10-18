@@ -35,15 +35,22 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 1.  Repoyu klonlayın:
     ```bash
-    git clone [https://github.com/utkutrk/CHATBOT.git](https://github.com/utkutrk/CHATBOT.git)
-    ```
-2.  Proje klasörüne gidin:
-    ```bash
+    git clone https://github.com/utkutrk/CHATBOT.git
     cd CHATBOT
     ```
-3.  Gerekli kütüphaneleri yükleyin (Eğer varsa):
+2.  Sanal ortam oluşturma ve çalıştırma:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/Mac
+    venv\Scripts\activate     # Windows
+    ```
+3.  Gerekli kütüphaneleri yükleyin:
     ```bash
     pip install -r requirements.txt
+    ```
+4.  Bir .env dosyası oluşturun ve Google API anahtarınızı ekleyin:
+    ```bash
+    GOOGLE_API_KEY=your_api_key
     ```
 4.  Programı çalıştırın:
     ```bash
