@@ -1,21 +1,36 @@
 # FİNANSAL CHATBOT
 
-Bu proje, [kullanılan teknoloji, örn: Python, TensorFlow] ile geliştirilmiş bir chatbot uygulamasıdır.
+Bu proje,finansal anlamda aklınıza takılan soruları cevaplayan merak ettiğiniz terimlerin anlamlarını ve kullanım alanlarını söyleyen bir chatbottur.
 
 ![Proje Ekran Görüntüsü](BURAYA_RESİM_URLSİ_GELECEK.png)
 
 ## Proje Hakkında
 
-Chatbot'un temel amacı [finans alanındaki merak ettiğiniz soruları hızlı bir şekilde veri tabanından çektiği bilgileri gemini ile sentezleyip cevaplar üretir. ]... Proje, kullanıcıdan aldığı girdilere doğal dil işleme teknikleri kullanarak anlamlı cevaplar üretir.
+Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve finansal sorularınızı yanıtlar. Kullanıcının sorusuna en uygun bilgi parçacıkları veri tabanından bulunur ve bu bilgiler Gemini modeliyle sentezlenerek tutarlı ve doğru bir cevap üretilir..
 
-## Özellikler
+## Bu projede kullanılan teknolojiler:
 
-- 🤖 Doğal dil anlama
-- 🗣️ Akıcı ve bağlamsal cevaplar
-- 📚 Genişletilebilir bilgi tabanı
-- ⚙️ Kolay kurulum
+Streamlit: Arayüz tasarımı için
+Huggingface: Veri setini çekmek için
+SentenceTransformers: Metinleri vektöre çevirmek için
+FAISS: Vektör benzerlik araması için
+Gemini API: En uygun cevabı üretmek için
 
-## Kurulum (Installation)
+## Deploy linki
+
+⬇️Aşağıdaki linkten chatbotu bilgisayarınıza kurmadan direkt tarayıcıdan ulaşabilirsiniz.⬇️
+https://chatbot-ho54eaxtqycwqz4gt3c8k7.streamlit.app/
+
+## Özellikler ve Kullanım Alanları
+Veri seti çok kapsamlı bir veri seti değildir bazı terimler mevcut olmayabilir ama çoğu finansal terim mevcuttur.
+finans ile ilgili terimler hakkında bilgi alabilir.Yatırım tercihleriniz hakkında yorum soruları sorabilirsiniz.
+Örnek sorular ve daha fazla bilgi websitesin sol üst köşesinde mevcuttur.
+
+<img width="921" height="905" alt="Ekran görüntüsü 2025-10-18 151002" src="https://github.com/user-attachments/assets/d4321de7-d62b-4c70-8ff0-44f9aa6a22f0" />![Uploading Ekran görüntüsü 2025-10-18 151002.png…]()
+
+
+
+## Kurulum (Installation) Özellikler ve Kullanım Alanları
 
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
