@@ -56,7 +56,7 @@ https://github.com/user-attachments/assets/6304cb60-0513-452b-bd50-19161b16c81b
     ```
 4.  Programı çalıştırın:
     ```bash
-    python data_loader.py 
+    python data_loader.py  #index dosyasını yükler
     streamlit run app.py
     ```
 ## İletişim
