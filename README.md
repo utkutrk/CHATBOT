@@ -7,7 +7,7 @@ Bu proje,finansal anlamda aklınıza takılan soruları cevaplayan merak ettiği
 Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve finansal sorularınızı yanıtlar. Kullanıcının sorusuna en uygun bilgi parçacıkları veri tabanından bulunur ve bu bilgiler Gemini modeliyle sentezlenerek tutarlı ve doğru bir cevap üretilir.
 
 ## Bu projede kullanılan teknolojiler:
-
+- Python 3.12+: kodlamanın yapıldığı ortam
 - Streamlit: Arayüz tasarımı için
 - Huggingface: Veri setini çekmek için 
 - SentenceTransformers: Metinleri vektöre çevirmek için
