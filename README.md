@@ -17,7 +17,7 @@ Chatbot'un temel amacı RAG mimarisini kullanarak huggingfaceden veri çeker ve 
 ## Deploy linki
 
 ⬇️Aşağıdaki linkten chatbotu bilgisayarınıza kurmadan direkt tarayıcıdan ulaşabilirsiniz.⬇️
--(Siteye uzun süre girilmediğinde uyku moduna geçmektedir "Yes, get this app back up!" butonuna tıklayıp başlatınız)
+- (Siteye uzun süre girilmediğinde uyku moduna geçmektedir "Yes, get this app back up!" butonuna tıklayıp başlatınız)
 
 - https://chatbot-ho54eaxtqycwqz4gt3c8k7.streamlit.app/
 
